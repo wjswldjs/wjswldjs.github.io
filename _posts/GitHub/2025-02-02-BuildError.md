@@ -1,7 +1,7 @@
 ---
 title: "Setup Ruby Error"
 date: 2025-02-02 01:00:00 +0900
-categories: [GitHub]
+categories: [GitHub, Log]
 tags: [blogging, error]
 math: false
 toc: false
