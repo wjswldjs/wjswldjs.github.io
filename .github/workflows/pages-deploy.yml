@@ -66,6 +66,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    concurrency:
+      group: "pages-deploy" # 배포 작업이나 특정 작업을 식별할 수 있는 이름으로 지정
+      cancel-in-progress: true # 이전 배포가 있으면 자동 취소
     needs: build
     steps:
       - name: Deploy to GitHub Pages
