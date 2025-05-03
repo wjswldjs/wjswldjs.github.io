@@ -1,0 +1,20 @@
+---
+---
+
+@use 'main'; // Chirpy 기본 스타일 불러오기
+
+/* 여기에 내 커스텀 CSS 추가 */
+#sidebar {
+  background: #eeedff;
+}
+
+#sidebar #avatar {
+  box-shadow: #c7c4ff 0 0 0 2px;
+}
+
+#sidebar .profile-wrapper {
+  display: flex;
+  flex-direction: column; /* 요소들을 세로로 정렬하려면 사용 */
+  align-items: center; /* 수평 정렬 */
+  text-align: center; /* 텍스트도 가운데 정렬 */
+}
