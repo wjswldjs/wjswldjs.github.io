@@ -12,4 +12,80 @@
   flex-direction: column; /* 요소들을 세로로 정렬하려면 사용 */
   align-items: center; /* 수평 정렬 */
   text-align: center; /* 텍스트도 가운데 정렬 */
+  justify-items: center;
+  padding-left: 1.25rem;
+}
+
+#sidebar > ul {
+  overflow: auto;
+  height: auto;
+}
+
+#sidebar ul > li > a, #sidebar ul > li > button {
+  color: rgba(117,117,117,.9);
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+#sidebar ul > li > button:hover, #sidebar ul > li > a > button:hover {
+  text-decoration: none;
+  color: var(--sidebar-active-color) !important;
+  transition: color .35s ease-in-out;
+}
+
+#sidebar .post-badge {
+  color: rgba(63, 63, 63, 0.9);
+}
+
+#sidebar .a button {
+  padding: 0;
+}
+
+#sidebar .nav-item {
+  justify-items: left;
+}
+
+#sidebar > nav > ul > hr {
+  width: 80%;
+  margin-left: 10%;
+  border-color: #c7c4ff;
+}
+
+#sidebar ul > li > button {
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 100%;
+}
+
+#sidebar .nav-link {
+  display: flex; /* a 태그에도 flexbox 적용 */
+  justify-content: flex-start; /* 텍스트 왼쪽 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  width: 100%; /* 너비 100%로 확장 */
+}
+
+#sidebar .nav-link .post-badge {
+  margin-left: auto; /* 배지 오른쪽 끝으로 정렬 */
+  font-size: 90%;
+}
+
+#sidebar ul > li > a {
+  display: flex; /* a 태그에도 flexbox 적용 */
+  justify-content: flex-start; /* 텍스트 왼쪽 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  width: 100%; /* 너비 100%로 확장 */
+}
+
+@media (min-width: 1650px) {
+  #sidebar .nav-item,
+  #sidebar ul > li > a > button {
+    justify-items: left;
+    text-align-last: left;
+  }
+  #sidebar .profile-wrapper {
+    justify-items: left;
+    text-align: left;
+    padding-left: 3.5rem;
+  }
 }
