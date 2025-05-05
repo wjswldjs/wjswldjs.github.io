@@ -6,6 +6,9 @@ tags: [blogging, log]
 math: false
 toc: true
 pin: false
+image:
+  path: /assets/img/202505/20250505_011.png
+  alt: "Thumbnail"
 ---
 
 내가 쓴 글에 댓글을 달 수 있었으면 좋겠다는 생각에, GitHub 기반 블로그에서 댓글 기능을 구현해보았습니다.
