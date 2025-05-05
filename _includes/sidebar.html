@@ -1,52 +1,203 @@
 <!-- The Side Bar -->
+<style>
+  :root {
+    --bs-list-group-item-padding-y: 0.75rem;
+    --bs-list-group-item-padding-x: 1.25rem;
+    --badge-font-size:              0.75em;
+    --badge-font-weight:            700;
+    --badge-color:                  #fff;
+    --badge-padding-y:              .35em;
+    --badge-padding-x:              .65em;
+    --badge-border-radius:          0.375rem;
+  }
+
+  #sidebar > ul {
+    overflow: auto;
+    height: auto;
+  }
+
+  #sidebar ul > li > a,
+  #sidebar ul > li > button {
+    color: rgba(117,117,117,.9);
+    text-decoration: none;
+    background: none;
+    border: none;
+  }
+
+  #sidebar ul > li > button:hover,
+  #sidebar ul > li > a > button:hover {
+    text-decoration: none;
+    color: var(--sidebar-active-color) !important;
+    transition: color .35s ease-in-out;
+  }
+
+  #sidebar .post-badge {
+    color: rgba(63, 63, 63, 0.9);
+  }
+
+  #sidebar .a button {
+    padding: 0;
+  }
+
+  #sidebar .nav-item {
+    justify-items: left;
+  }
+
+  #sidebar > nav > ul > hr {
+    width: 80%;
+    margin-left: 10%;
+    border-color: #c7c4ff;
+  }
+
+  #sidebar ul > li > button {
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 100%;
+  }
+
+  #sidebar .nav-link {
+    display: flex; /* a 태그에도 flexbox 적용 */
+    justify-content: flex-start; /* 텍스트 왼쪽 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 너비 100%로 확장 */
+  }
+
+  #sidebar .nav-link .post-badge {
+    margin-left: auto; /* 배지 오른쪽 끝으로 정렬 */
+    font-size: 90%;
+  }
+
+  #sidebar ul > li > a {
+    display: flex; /* a 태그에도 flexbox 적용 */
+    justify-content: flex-start; /* 텍스트 왼쪽 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 너비 100%로 확장 */
+  }
+
+  #sidebar .profile-wrapper {
+    text-align: center;
+    justify-items: center;
+    padding-left: 1.25rem;
+  }
+
+  @media (min-width: 1650px) {
+    #sidebar .nav-item,
+    #sidebar ul > li > a > button {
+      justify-items: left;
+      text-align-last: left;
+    }
+    #sidebar .profile-wrapper {
+      justify-items: left;
+      text-align: left;
+      padding-left: 3.5rem;
+    }
+  }
+</style>
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
-      {%- if site.avatar != empty and site.avatar -%}
+      {%- if site.avatar %}
         {%- capture avatar_url -%}
           {% include media-url.html src=site.avatar %}
         {%- endcapture -%}
         <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
       {%- endif -%}
     </a>
-
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
     <p class="site-subtitle mb-0">{{ site.profileMessage }}</p>
   </header>
-  <!-- .profile-wrapper -->
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
-      <!-- home -->
-      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+    <ul class="nav flex-column">
+      <!-- Home -->
+      <li class="nav-item{% if page.layout == 'home' %} active{% endif %}">
         <a href="{{ '/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+          {{ site.data.locales[include.lang].tabs.home | upcase }}
         </a>
       </li>
-      <!-- the real tabs -->
-      {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | relative_url }}" class="nav-link">
-            <i class="fa-fw {{ tab.icon }}"></i>
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
 
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-        <!--{% endfor %}-->
+      <hr/>
+
+      {% assign group_index = 0 %}
+      {% assign sort_categories = site.categories | sort %}
+      {% assign page_category = page.categories[0] %}
+      {% assign page_subcategory = page.categories[1] %}
+      {% assign page_sub_slug = page_subcategory | slugify %}
+
+      {% for category in sort_categories %}
+        {% assign category_name = category | first %}
+        {% assign posts = category | last %}
+        {% assign first_post = posts | first %}
+
+        {% if category_name == first_post.categories[0] %}
+          {% assign sub_categories = "" | split: "" %}
+          {% for post in posts %}
+            {% assign sub_cat = post.categories[1] %}
+            {% if sub_cat %}
+              {% unless sub_categories contains sub_cat %}
+                {% assign sub_categories = sub_categories | push: sub_cat %}
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+          {% assign sub_categories = sub_categories | sort %}
+          {% capture collapse_id %}collapse_menu_{{ group_index }}{% endcapture %}
+          {% assign is_active = category_name == page_category %}
+          {% assign expand = false %}
+          {% for sub in sub_categories %}
+            {% if sub | slugify == page_sub_slug %}
+              {% assign expand = true %}
+            {% endif %}
+          {% endfor %}
+          {% capture category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
+
+          {% if sub_categories.size > 0 %}
+            <!-- 드롭다운 처리 -->
+            <li class="nav-item">
+              <button class="nav-link w-100 d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse" data-bs-target="#{{ collapse_id }}"
+                aria-expanded="{{ expand }}"
+                aria-controls="{{ collapse_id }}">
+                {{ category_name | upcase }}
+                <span class="badge post-badge">{{ posts | size }}</span>
+              </button>
+
+              <ul id="{{ collapse_id }}" class="collapse{% if expand %} show{% endif %} list-unstyled ps-3">
+                {% for sub in sub_categories %}
+                  {% capture sub_url %}/categories/{{ sub | slugify | url_encode }}/{% endcapture %}
+                  <li class="nav-item{% if sub == page_subcategory %} active{% endif %}">
+                    <a href="{{ sub_url | relative_url }}" class="nav-link">
+                      {{ sub | capitalize }}
+                      <span class="badge post-badge">
+                        {{ site.categories[sub] | size }}
+                      </span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <!-- 하위 카테고리 없을 때: 링크로 바로 연결 -->
+            <li class="nav-item{% if page.url == category_url or category_name == page_category %} active{% endif %}">
+              <a href="{{ category_url | relative_url }}" class="nav-link d-flex justify-content-between align-items-center">
+                {{ category_name | upcase }}
+                <span class="badge post-badge">{{ posts | size }}</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {% assign group_index = group_index | plus: 1 %}
+        {% endif %}
+      {% endfor %}
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
       </button>
-
       {% if site.data.contact.size > 0 %}
         <span class="icon-border"></span>
       {% endif %}
@@ -55,14 +206,10 @@
     {% for entry in site.data.contact %}
       {% case entry.type %}
         {% when 'github', 'twitter' %}
-          {%- capture url -%}
-            https://{{ entry.type }}.com/{{ site[entry.type].username }}
-          {%- endcapture -%}
+          {% capture url %}https://{{ entry.type }}.com/{{ site[entry.type].username }}{% endcapture %}
         {% when 'email' %}
           {% assign email = site.social.email | split: '@' %}
-          {%- capture url -%}
-            javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-          {%- endcapture -%}
+          {% capture url %}javascript:location.href='mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){% endcapture %}
         {% when 'rss' %}
           {% assign url = '/feed.xml' | relative_url %}
         {% else %}
@@ -70,22 +217,9 @@
       {% endcase %}
 
       {% if url %}
-        <a
-          href="{{ url }}"
-          aria-label="{{ entry.type }}"
-          {% assign link_types = '' %}
-
+        <a href="{{ url }}" aria-label="{{ entry.type }}"
           {% unless entry.noblank %}
-            target="_blank"
-            {% assign link_types = 'noopener noreferrer' %}
-          {% endunless %}
-
-          {% if entry.type == 'mastodon' %}
-            {% assign link_types = link_types | append: ' me' | strip %}
-          {% endif %}
-
-          {% unless link_types == empty %}
-            rel="{{ link_types }}"
+            target="_blank" rel="noopener noreferrer"
           {% endunless %}
         >
           <i class="{{ entry.icon }}"></i>
@@ -93,6 +227,4 @@
       {% endif %}
     {% endfor %}
   </div>
-  <!-- .sidebar-bottom -->
 </aside>
-<!-- #sidebar -->
