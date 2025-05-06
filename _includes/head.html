@@ -70,9 +70,6 @@
     href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}"
   />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" />
-
   <!-- Web Font -->
   <link
     rel="stylesheet"
@@ -106,6 +103,9 @@
   />
   {% endif %}
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" />
+  
   <!-- Scripts -->
 
   <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>

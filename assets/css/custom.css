@@ -1,8 +1,11 @@
 /* 여기에 내 커스텀 CSS 추가 */
+
+/* sidebar */
 #sidebar {
   background: #eeedff;
 }
 
+/* 프로필 사진 테두리 */
 #sidebar #avatar {
   box-shadow: #c7c4ff 0 0 0 2px;
 }
@@ -12,7 +15,6 @@
   flex-direction: column; /* 요소들을 세로로 정렬하려면 사용 */
   align-items: center; /* 수평 정렬 */
   text-align: center; /* 텍스트도 가운데 정렬 */
-  justify-items: center;
   padding-left: 1.25rem;
 }
 
@@ -46,7 +48,7 @@
   justify-items: left;
 }
 
-#sidebar > nav > ul > hr {
+.sidebar-divider {
   width: 80%;
   margin-left: 10%;
   border-color: #c7c4ff;
