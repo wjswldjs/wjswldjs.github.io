@@ -4,7 +4,7 @@ date: 2025-02-02 18:00:00 +0900
 categories: [Tech, Docs]
 tags: [data, sql]
 math: true
-toc: false
+toc: true
 pin: false
 ---
 
