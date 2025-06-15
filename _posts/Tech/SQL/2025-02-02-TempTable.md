@@ -1,7 +1,7 @@
 ---
 title: "Temp Table"
 date: 2025-02-02 18:00:00 +0900
-categories: [Tech, Docs]
+categories: [Tech, SQL]
 tags: [data, sql]
 math: true
 toc: true
