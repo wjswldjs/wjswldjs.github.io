@@ -4,53 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "7ae6a4d7fae99105",
+        "id": "4fa3a9608cd0170a",
         "type": "tabs",
         "children": [
           {
-            "id": "df78033cfa075b9a",
+            "id": "6ba4e70d240534a9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "templates/Tech-Docs.md",
-                "mode": "source",
-                "source": false
+                "aFile": "notes/2026-01-20-LlmRagAIAgentAgenticAI.md",
+                "bFile": "notes/2026-01-20-LlmRagAIAgentAgenticAI.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Tech-Docs"
-            }
-          },
-          {
-            "id": "d6f015c95e7724f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "templates/Tech-Docs.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Tech-Docs"
-            }
-          },
-          {
-            "id": "7aaf3689fbd92559",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "templates/Tech-Docs.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Tech-Docs"
+              "icon": "diff",
+              "title": "Diff: 2026-01-20-LlmRagAIAgentAgenticAI  (Working Tree)"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/Tech-Docs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Tech-Docs 의 백링크"
+              "title": "백링크"
             }
           },
           {
@@ -142,12 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/Tech-Docs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Tech-Docs 의 나가는 링크"
+              "title": "나가는 링크"
             }
           },
           {
@@ -185,21 +154,30 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/Tech-Docs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Tech-Docs 의 개요"
+              "title": "개요"
+            }
+          },
+          {
+            "id": "261e56834e3e63a7",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,11 +192,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7aaf3689fbd92559",
+  "active": "6ba4e70d240534a9",
   "lastOpenFiles": [
-    "2026-01-20-ㅇㅇ.md",
-    "templates/Tech-Docs.md",
+    "2026-01-20-LlmRagAIAgentAgenticAI.md",
     "templates/Markdown.md",
+    "templates/Tech-Docs.md",
+    "2026-01-20-ㅇㅇ.md",
     "templates/NewsSheet.md",
     "무제.md",
     "templates",
