@@ -1,17 +1,16 @@
 ---
-title: "February 1, 2025"
-date: 2025-02-01 00:00:00 +0900
+title: "{{date}}"
+date: "{{date}} {{time}}"
 categories: [NewsSheet]
 tags: [newsy]
 math: true
-toc: false
+toc: true
 pin: false
 ---
 
 ## 📰 Newsy news
-1. [News1](#)
-2. [News2](#)
-3. [News3](#)
+* TOC
+{:toc}
 
 <br>
 
