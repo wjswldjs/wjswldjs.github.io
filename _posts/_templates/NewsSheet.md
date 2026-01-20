@@ -9,6 +9,7 @@ pin: false
 ---
 
 ## 📰 Newsy news
+{: .no_toc}
 * TOC
 {:toc}
 

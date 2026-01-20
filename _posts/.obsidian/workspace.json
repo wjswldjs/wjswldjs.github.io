@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e50febc69ad3be5b",
+        "id": "c4f41faaed6940e1",
         "type": "tabs",
         "children": [
           {
-            "id": "f28107ba040da42d",
+            "id": "ae6707a0073be240",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tech/AI/2026-01-20-LlmRagAIAgentAgenticAI.md",
+                "file": "_templates/NewsSheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-01-20-LlmRagAIAgentAgenticAI"
+              "title": "NewsSheet"
             }
           }
         ]
@@ -191,14 +191,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f28107ba040da42d",
+  "active": "ae6707a0073be240",
   "lastOpenFiles": [
+    "_templates/Markdown.md",
+    "_templates/NewsSheet.md",
+    "_templates/Tech-Docs.md",
     "Tech/AI/2026-01-20-LlmRagAIAgentAgenticAI.md",
     "2026-01-20.md",
     "무제.md",
-    "_templates/Tech-Docs.md",
-    "_templates/NewsSheet.md",
-    "_templates/Markdown.md",
     "_templates",
     "2026-01-20-LlmRagAIAgentAgenticAI.md",
     "templates/Markdown.md",
