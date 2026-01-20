@@ -11,14 +11,14 @@
             "id": "6ba4e70d240534a9",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "notes/2026-01-20-LlmRagAIAgentAgenticAI.md",
-                "bFile": "notes/2026-01-20-LlmRagAIAgentAgenticAI.md",
-                "aRef": ""
+                "file": "Tech/AI/2026-01-20-LlmRagAIAgentAgenticAI.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 2026-01-20-LlmRagAIAgentAgenticAI  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "2026-01-20-LlmRagAIAgentAgenticAI"
             }
           }
         ]
@@ -188,18 +188,23 @@
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ba4e70d240534a9",
+  "active": "2a76fc90bdb0ad69",
   "lastOpenFiles": [
+    "2026-01-20.md",
+    "무제.md",
+    "Tech/AI/2026-01-20-LlmRagAIAgentAgenticAI.md",
+    "_templates/Tech-Docs.md",
+    "_templates/NewsSheet.md",
+    "_templates/Markdown.md",
+    "_templates",
     "2026-01-20-LlmRagAIAgentAgenticAI.md",
     "templates/Markdown.md",
     "templates/Tech-Docs.md",
     "2026-01-20-ㅇㅇ.md",
     "templates/NewsSheet.md",
-    "무제.md",
     "templates",
     "_template/2025-01-01-Tech-Docs.md",
     "_template/2025-01-01-NewsSheet.md",
