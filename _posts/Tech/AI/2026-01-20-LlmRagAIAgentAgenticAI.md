@@ -88,5 +88,5 @@ like 주방 상황에 따라 전략을 수정하는 '총괄 셰프'
 
 ## 🔗 참고 자료
 
-- [linkedin]([https://www.linkedin.com/posts/brijpandeyji_llm-rag-ai-agent-agentic-ai-most-people-activity-7352557799333158913-MSFD](https://www.linkedin.com/posts/brijpandeyji_llm-rag-ai-agent-agentic-ai-most-people-activity-7352557799333158913-MSFD))
+- [LinkedIn 게시물](https://www.linkedin.com/posts/brijpandeyji_llm-rag-ai-agent-agentic-ai-most-people-activity-7352557799333158913-MSFD)
 
