@@ -172,8 +172,13 @@ ___
 
 
 > [!NOTE]
-> 여기는 콜아웃 내용입니다. Notion처럼 아이콘과 배경색이 입혀집니다.
+> 
 
+> [!TIP]
+> 
 
-`[!TIP]`, `[!WARNING]`, `[!IMPORTANT]`
+> [!WARNING]
+> 
 
+> [!IMPORTANT]
+> 

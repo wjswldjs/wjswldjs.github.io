@@ -1,8 +1,8 @@
 ---
 title: "Temp Table"
 date: 2025-02-02 18:00:00 +0900
-categories: [Tech, SQL]
-tags: [data, sql]
+categories: [Tech, Database]
+tags: [sql, temp]
 math: true
 toc: true
 pin: false
@@ -71,7 +71,7 @@ CREATE GLOBAL TEMPORARY TABLE temp_users (
     name VARCHAR2(50)
 );
 
--- SQL Server
+-- Database Server
 CREATE TABLE #temp_users (
     id INT,
     name VARCHAR(50)

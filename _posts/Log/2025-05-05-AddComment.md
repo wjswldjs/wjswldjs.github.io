@@ -1,7 +1,7 @@
 ---
 title: "GitHub 블로그에 댓글 기능 달기 (Utterances 활용)"
 date: 2025-05-05 10:00:00 +/-TTTT
-categories: [GitHub, Log]
+categories: [Log, Dev]
 tags: [blogging, log]
 math: false
 toc: true

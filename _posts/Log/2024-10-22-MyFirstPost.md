@@ -1,7 +1,7 @@
 ---
 title: "My First Post"
 date: 2024-10-22 17:00:00 +/-TTTT
-categories: [GitHub, Log]
+categories: [Log, Memo]
 tags: [blogging, log]
 math: false
 toc: false

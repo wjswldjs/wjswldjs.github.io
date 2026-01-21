@@ -1,8 +1,8 @@
 ---
 title: "PostgreSQL 프로시저 구조 완벽 정리"
 date: 2025-05-07 18:00:00 +0900
-categories: [Tech, SQL]
-tags: [data, sql]
+categories: [Tech, Database]
+tags: [sql, postgresql, procedure]
 math: true
 toc: true
 pin: false

@@ -4,8 +4,7 @@ date: 2026-01-20 21:49:44 +0900
 categories:
   - Tech
   - AI
-tags:
-  - ai
+tags: [ai, llm, rag, ai-agent, agentic-ai]
 math: true
 toc: true
 pin: false

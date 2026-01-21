@@ -1,7 +1,7 @@
 ---
 title: ""
 date: "{{date}} {{time}}"
-categories: [Tech, SQL]  
+categories: [Tech, Database]  
 tags: [data, sql]
 math: true
 toc: true

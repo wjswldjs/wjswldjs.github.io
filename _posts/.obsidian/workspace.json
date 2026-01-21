@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_templates/NewsSheet.md",
+                "file": "Log/2026-01-21-AboutMe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NewsSheet"
+              "title": "2026-01-21-AboutMe"
             }
           }
         ]
@@ -177,7 +177,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,22 +195,40 @@
   "active": "ae6707a0073be240",
   "lastOpenFiles": [
     "_templates/Markdown.md",
+    "Log/2026-01-21-AboutMe.md",
+    "Tech/AI/2026-01-20-LlmRagAIAgentAgenticAI.md",
+    "2026-01-21-AboutMe.md",
+    "Log/2025-02-01-News.md",
+    "Log/2025-05-05-FixCss.md",
+    "Log/2025-05-05-AddComment.md",
+    "Log/2025-02-02-BuildError.md",
+    "Log/2024-10-22-MyFirstPost.md",
+    "Log",
+    "DevLog/2025-05-05-FixCss.md",
+    "DevLog/2025-05-05-AddComment.md",
+    "DevLog/2025-02-02-BuildError.md",
+    "DevLog/2024-10-22-MyFirstPost.md",
+    "DevLog",
+    "Tech/Database/2025-05-07-PostgreSQLProcedureStructure.md",
+    "Tech/Database/2025-02-02-TempTable.md",
+    "Tech/Database",
+    "Tech/AI",
+    "Tech/AI & Automation/2026-01-20-LlmRagAIAgentAgenticAI.md",
+    "Tech/AI & Automation",
+    "Tech/Backend",
+    "Tech/Data/2025-05-07-PostgreSQLProcedureStructure.md",
+    "Tech/Data/2025-02-02-TempTable.md",
+    "Tech/Data",
+    "Tech/CICD",
+    "Tech/CI/CD",
+    "Tech/CI",
     "_templates/NewsSheet.md",
     "_templates/Tech-Docs.md",
-    "Tech/AI/2026-01-20-LlmRagAIAgentAgenticAI.md",
     "2026-01-20.md",
     "무제.md",
-    "_templates",
     "2026-01-20-LlmRagAIAgentAgenticAI.md",
     "templates/Markdown.md",
     "templates/Tech-Docs.md",
-    "2026-01-20-ㅇㅇ.md",
-    "templates/NewsSheet.md",
-    "templates",
-    "_template/2025-01-01-Tech-Docs.md",
-    "_template/2025-01-01-NewsSheet.md",
-    "_template/2025-01-01-Markdown.md",
-    "_template",
-    "무제.base"
+    "2026-01-20-ㅇㅇ.md"
   ]
 }
